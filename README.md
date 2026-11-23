@@ -9,7 +9,7 @@ terraform {
     }
   }
   required_version = ">1.12.0"
-а}
+}
 
 resource "yandex_container_registry" "registry" {
   name      = var.name
