@@ -1052,7 +1052,7 @@ Outputs:
 
 container_registry_image_tag = "cr.yandex/crp5mckd1v62viorqvla/application-web:latest"
 ```
-Видимо в конце необходимый output
+Видим в конце необходимый output
 <img width="807" height="136" alt="image" src="https://github.com/user-attachments/assets/f8d833ca-63c4-4317-b28a-d221775dde62" />
 
 Заходим в папку с репой приложения и собираем образ
@@ -1062,6 +1062,7 @@ container_registry_image_tag = "cr.yandex/crp5mckd1v62viorqvla/application-web:l
 <img width="636" height="594" alt="image" src="https://github.com/user-attachments/assets/05d528aa-0db1-4577-94e6-3551971741a1" />
 
 Проверяем работоспособность приложения через браузер
+
 <img width="452" height="187" alt="image" src="https://github.com/user-attachments/assets/319ba517-fb85-4f4d-b63f-dc7e1013e8c8" />
 
 Всё работает. Таким образом, ручной труд минимизирован, нужно только скачать исходники, запустить terraform, собрать контейнер и запушить. Вручную тягать проект на ВМ и заполнять переменные не нужно.
@@ -1106,6 +1107,9 @@ P.S. также хотел вместо iam_bindind для реестра кон
 ```
 В переменную pull_ip подставлял белый адрес созданной ВМ, через обращение к готовому ресурсу
 Политика доступа по IP создавалась, но ВМ всё равно не могла выполнить pull необходимого контейнера, пытался подставлять и серый адрес(понимаю, что это бессмысленно, но попробовать же стоит), но это не помогло. Информацию найти так и не смог как это сделать корректно
+
+Код terraform: https://github.com/IGrishunin/ter-homeworks-05.git ветка terraform-end
+Код приложения и .md https://github.com/IGrishunin/terraform-end-src-web.git
 Буду очень признателен, если подскажите, как разрешить доступ с ВМ в реестр без открытия пула для всех(как сейчас) и без передачи кредов сервисного аккаунта на ВМ. Тогда доработаю проект, чтобы можно было использовать 2 варианта(iam bindind и ip bindind)
 
 
