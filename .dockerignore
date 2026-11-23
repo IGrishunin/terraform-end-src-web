@@ -5,16 +5,4 @@ Dockerfile*
 haproxy
 nginx
 proxy.yaml
-
-terraform*
-*.tf
-vpc
-mysql
-mysql_content/
-cloud-init.yml
-**/.terraform/*
-.terraform*
-.terraformrc
-*.tfstate
-*.tfstate.*
-personal.auto.tfvars
+docker-compose.yaml
